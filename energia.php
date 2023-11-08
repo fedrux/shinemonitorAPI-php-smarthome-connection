@@ -39,8 +39,8 @@ function inviaMessaggioTelegram($message){
     $message .= "\nDevice: ".$device;
 
     // Replace 'YOUR_BOT_TOKEN' with your actual bot token
-    $botToken = '6535708839:AAE1Yo2OPvB_-r07MtNblNi6tsurjCl9bqQ';
-    $chatId = '@energiaadreanigruppo'; // Replace with the chat ID where you want to send the message
+    $botToken = 'YOUR_BOT_TOKEN';
+    $chatId = '@XXXXXXXXXXXXXX id chat o group'; // Replace with the chat ID where you want to send the message
 
 // Create a URL for the Telegram Bot API
     $apiUrl = "https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($message);
@@ -77,7 +77,8 @@ function iftttTrigger($eventName){
     }
 
     //https://ifttt.com/maker_webhooks/my_applets then click on documentation
-    $iftttKey = 'CW_-ln9AiulmohfFXGdWd';
+    $iftttKey = 'XXXXXXXXXXXXXX ifttt key';
+    
 // Use the event name you created in step 2
 
     $data = [
@@ -133,16 +134,16 @@ function logToCSV($data, $logFilePath, $maxSize = 10485760 /* 10MB */) {
 
 
 
-$usrname="ADREANI";
+$usrname="XXXXXXXXXXX";
 $salt = strval(microtime(true) * 1000); // Salt value
-$sha1Pwd = sha1("kinder2011");
-$companyKey="bnrl_frRFjEz8Mkn";
+$sha1Pwd = sha1("XXXXXXXXXXX");
+$companyKey="XXXXXXXXXXX";
 $source="1";
 $_app_id_ = "com.eybond.smartclient.ess";
 $_app_version_ = "3.26.1.2";
 $_app_client_ = "android";
-$pn="W0023400550705";
-$sn ="96342205102417";
+$pn="XXXXXXXXXX";
+$sn ="XXXXXXXXXXX";
 
 $passwordPagina = sha1($usrname.$sha1Pwd);
 if ($_GET["passwordPagina"] !== $passwordPagina){
@@ -419,10 +420,6 @@ function request($url){
                 //non mettere altre cose in questa sezione altrimenti va tutto a puttane il sistema energia.ino
                 $arrayParametri["timestamp"] = strtotime($arrayParametri["timestamp"]);
                 echo (json_encode($arrayParametri));
-
-                /*
-                 * {"timestamp":"2023-10-31 12:11:18","bt_battery_capacity":56,"bt_battery_charging_current":50,"bt_battery_discharge_current":0,"pv_output_power":5.165,"grid_active_power":false,"load_active_power":2.633,"led_green":[2,20],"led_yellow":[1,0],"led_red":[0,0],"led_blue":[2,56]}
-                 */
             ?>
         </p>
     </div>
